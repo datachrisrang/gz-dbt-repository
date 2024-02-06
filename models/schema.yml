@@ -26,6 +26,9 @@ sources:
         columns:
           - name: products_id
             description: The primary key of the table
+            tests:
+              - not_null
+              - unique
           - name: purchase_price
             description: the price for purchase
           
@@ -35,6 +38,9 @@ sources:
         columns:
           - name: orders_id
             description: the orders id of sales, the primary key and foreign key
+            tests:
+              - not_null
+              - unique
           - name: shipping_fee
             description: the fee of shipping
           - name: logCost
