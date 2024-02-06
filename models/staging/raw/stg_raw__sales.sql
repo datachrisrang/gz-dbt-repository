@@ -19,4 +19,10 @@ renamed as (
 
 )
 
-select * from renamed
+select 
+    date_date,
+    concat(orders_id, '_', pdt_id) AS sales_id,
+    revenue,
+    quantity
+ from renamed
+

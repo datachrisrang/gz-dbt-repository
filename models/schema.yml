@@ -8,11 +8,14 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: details about sales
+        tests:
+          - unique:
+              column_name: "(orders_id|| '_' ||pdt_id )"
         columns:
           - name: date_date
             description: the date of sales
           - name: orders_id
-            description: the orders id of sales, primary key
+            description: the orders id of sales
           - name: pdt_id
             description: the product id
           - name: revenue
