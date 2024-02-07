@@ -13,4 +13,5 @@ with subquery AS (
 select
  *,
  round((revenue - purchase_cost),2) as margin
+ ,{{margin_percent('revenue', 'purchase_cost')}} as margin_percent
 from subquery
