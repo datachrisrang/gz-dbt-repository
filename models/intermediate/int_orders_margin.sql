@@ -3,12 +3,13 @@ with subquery AS (
         date_date,
         orders_id,
         revenue,
+        product.products_id,
         quantity,
         purchase_price * quantity AS purchase_cost
         
     FROM {{ref("stg_raw__sales")}} AS sales
     JOIN {{ref("stg_raw__product")}} AS product
-    ON sales.pdt_id = product.products_id
+    ON sales.products_id = product.products_id
 )
 select
  orders_id,
