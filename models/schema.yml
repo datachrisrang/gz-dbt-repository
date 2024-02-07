@@ -69,6 +69,7 @@ sources:
             tests:
               - not_null
               
+              
       - name: criteo
         identifier: raw_gz_criteo
         description: detail of campaign in criteo
@@ -106,6 +107,10 @@ sources:
 
       - name: int_campaigns_day
         identifier: int_campaigns_day
+        description: deatil of campaigns for day
+      
+      - name: int_campaigns_month
+        identifier: int_campaigns_month
         description: deatil of campaigns for day
 
     
