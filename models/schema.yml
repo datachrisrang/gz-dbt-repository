@@ -34,7 +34,7 @@ sources:
               - unique
           - name: purchase_price
             description: the price for purchase
-          
+      
       - name: ship
         identifier: raw_gz_ship
         description: details about ship
@@ -87,32 +87,34 @@ sources:
             description: The primary key of the table
             tests:
               - not_null
-              
+
+models:
+- name: int_sales_margin
+  tests:
+    - unique:
+        column_name: "(orders_id || '-' || products_id)"
+    - not_null:
+        column_name:
+          - orders_id
+          - products_id
+          - margin
+          - Purchase_cost
+          - date_date
+          - revenue
+          - quantity
+
+- name: int_campaigns
+  test:
+    - not_null  
+  
+- name: int_campaigns_day
+  test:
+    - not_null 
       
-      - name: int_sales_margin
-        identifier: int_sales_margin
-        description: deail of margin for sales
-
-      - name: int_orders_operational
-        identifier: int_orders_operational
-        description: detail of operational for orders
-
-      - name: int_oreders_maring
-        identifier: int_orders_margin
-        description: detail of margin for orders
-
-      - name: int_campaigns
-        identifier: int_campaigns
-        description: detail of all campaigns
-
-      - name: int_campaigns_day
-        identifier: int_campaigns_day
-        description: deatil of campaigns for day
-      
-      - name: int_campaigns_month
-        identifier: int_campaigns_month
-        description: deatil of campaigns for day
-
+- name: int_campaigns_month
+  test:
+    - not_null 
+  
     
 
 
