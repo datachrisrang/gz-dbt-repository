@@ -54,19 +54,39 @@ sources:
       - name: adwords
         identifier: raw_gz_adwords
         description: detail of campaign in adwords
-      
+        columns: 
+          - name: campaign_key
+            description: The primary key of the table
+            tests:
+              - not_null
+              - unique
       - name: bing
         identifier: raw_gz_bing
         description: detail of campaign in bing
-
+        columns: 
+          - name: campaign_key
+            description: The primary key of the table
+            tests:
+              - not_null
+              - unique
       - name: criteo
         identifier: raw_gz_criteo
         description: detail of campaign in criteo
-
+        columns: 
+          - name: campaign_key
+            description: The primary key of the table
+            tests:
+              - not_null
+              - unique
       - name: facebook
         identifier: raw_gz_facebook
         description: detail of campaign in facebook
-        
+        columns: 
+          - name: campaign_key
+            description: The primary key of the table
+            tests:
+              - not_null
+              - unique
 
 
 
