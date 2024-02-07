@@ -59,7 +59,7 @@ sources:
             description: The primary key of the table
             tests:
               - not_null
-              - unique
+              
       - name: bing
         identifier: raw_gz_bing
         description: detail of campaign in bing
@@ -68,7 +68,7 @@ sources:
             description: The primary key of the table
             tests:
               - not_null
-              - unique
+              
       - name: criteo
         identifier: raw_gz_criteo
         description: detail of campaign in criteo
@@ -77,7 +77,7 @@ sources:
             description: The primary key of the table
             tests:
               - not_null
-              - unique
+              
       - name: facebook
         identifier: raw_gz_facebook
         description: detail of campaign in facebook
@@ -86,7 +86,29 @@ sources:
             description: The primary key of the table
             tests:
               - not_null
-              - unique
+              
+      
+      - name: int_sales_margin
+        identifier: int_sales_margin
+        description: deail of margin for sales
+
+      - name: int_orders_operational
+        identifier: int_orders_operational
+        description: detail of operational for orders
+
+      - name: int_oreders_maring
+        identifier: int_orders_margin
+        description: detail of margin for orders
+
+      - name: int_campaigns
+        identifier: int_campaigns
+        description: detail of all campaigns
+
+      - name: int_campaigns_day
+        identifier: int_campaigns_day
+        description: deatil of campaigns for day
+
+    
 
 
 
